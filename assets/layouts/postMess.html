@@ -1,0 +1,35 @@
+<%for(var mess in models){%>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <a id='reply' href='#mess/<%=models[mess]._id%>'>
+                <%=models[mess].name%>
+            </a>
+        </div>
+        <div class="panel-body">
+        <%=models[mess].message%>
+        </div>
+    </div>
+<%}%>
+<form class='form-horizontal'>
+    <fieldset>
+        <legend>post</legend>
+        <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">name</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="name" placeholder="name" />
+            </div>
+            <div class="form-group">
+                <label for="textArea" class="col-lg-2 control-label">message</label>
+                <div class="col-lg-10">
+                    <textarea class="form-control" rows="3" id="message" placeholder="message"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="button" class="btn btn-default" id='back'>back</button>
+                <button type="button" class="btn btn-primary" id='su' >Submit</button>
+            </div>
+        </div>
+    </fieldset>
+</form>

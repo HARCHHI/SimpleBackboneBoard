@@ -1,0 +1,8 @@
+<%for(var mess in models){%>
+    <div class="panel panel-default">
+      <div class="panel-heading"><%=models[mess].name%></div>
+      <div class="panel-body">
+        <%=models[mess].message%>
+      </div>
+    </div>
+<%}%>
