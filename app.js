@@ -4,7 +4,6 @@ var bodyparser = require('body-parser');
 var mongoose = require('mongoose');
 var app=express();
 mongoose.connect('mongodb://localhost/test');
-
 var MessSchema = new mongoose.Schema({
     name : String ,
     message : String,
