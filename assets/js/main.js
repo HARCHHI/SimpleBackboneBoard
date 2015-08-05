@@ -1,13 +1,13 @@
 var Router=Backbone.Router.extend({
 	routes: {
-		'mess/:id': 'viewSingle',
+		':id': 'viewSingle',
 		'*frag': 'defaultRouter'
 	},
 	viewSingle: function(id){
 		if(this.view) this.view.remove();
 		this.view=new replyMess({model:new Mess_model({'rootMess': id})});
 	},
-	defaultRouter: function(frag){
+	defaultRouter: function(){
 		if(this.view) this.view.remove();
         this.view=new postMess;
 	}

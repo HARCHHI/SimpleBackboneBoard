@@ -1,8 +1,8 @@
 <%for(var mess in models){%>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <% if(models[mess].rootMess ==''){%>
-                <a id='reply' href='#mess/<%=models[mess]._id%>'>
+            <% if(window.workspace.view.mess.get('rootMess')==''){%>
+                <a id='reply' href='#<%=models[mess]._id%>'>
                     <%=models[mess].name%>
                 </a>
             <% }else{%><%=models[mess].name%><%}%>
@@ -18,7 +18,7 @@
 <form class='form-horizontal'>
     <fieldset>
         <legend>
-            <%if(models[mess].rootMess ==''){%>post<%}else{%>reply<%}%></legend>
+            <% if(window.workspace.view.mess.get('rootMess') ==''){%>post<%}else{%>reply<%}%></legend>
         <div class="form-group">
             <label for="inputEmail" class="col-lg-2 control-label">name</label>
             <div class="col-lg-10">
@@ -36,6 +36,7 @@
                 <button type="button" class="btn btn-default" id='back'>back</button>
                 <button type="button" class="btn btn-primary" id='su' >Submit</button>
             </div>
+
         </div>
     </fieldset>
 </form>

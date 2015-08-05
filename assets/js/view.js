@@ -12,7 +12,7 @@ var extView=Backbone.View.extend({
 		var self=this;
 		$.get('./layouts/'+this.name+'.html',function(rs){
 			var template=_.template(rs);
-			self.$el.html( template(self.model.attributes || {models: self.model.toJSON()}) );
+			self.$el.html( template(self.model.attributes || {models: self.model.toJSON()}));
 		});
 	}
 });
@@ -27,12 +27,12 @@ var postMess=extView.extend({
         }});
 	},
 	events:{
-		'click #back':'changePage',
+		'click #back':'PageBack',
         'click #su':'submit',
         'change #name':'setValue',
         'change #message':'setValue',
 	},
-	changePage:function(){
+	PageBack:function(){
 		workspace.navigate('',{trigger: true});
     },
     submit: function(e){
@@ -55,7 +55,6 @@ var replyMess = postMess.extend({
     initialize: function(){
         var self=this;
         this.mess=this.model;
-        
         this.model=new Messes_model;
         this.model.url='/mess/'+this.mess.get('rootMess');
         this.model.fetch({success: function(){
@@ -63,3 +62,4 @@ var replyMess = postMess.extend({
         }});
     }
 });
+
