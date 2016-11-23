@@ -1,0 +1,32 @@
+{
+  "name": "simplebackboneboard",
+  "version": "1.0.0",
+  "description": "a simple board build by backbone",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HARCHHI/SimpleBackboneBoard.git"
+  },
+  "keywords": [
+    "backboneJS",
+    "express",
+    "mongoDB"
+  ],
+  "author": "HARCHHI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HARCHHI/SimpleBackboneBoard/issues"
+  },
+  "homepage": "https://github.com/HARCHHI/SimpleBackboneBoard#readme",
+  "devDependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.8"
+  },
+  "dependencies": {
+    "mongoose": "^4.6.8"
+  }
+}
